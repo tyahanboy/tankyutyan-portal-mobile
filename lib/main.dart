@@ -102,7 +102,7 @@ class _PortalPageState extends State<PortalPage> {
       onPopInvokedWithResult: (didPop, result) async {
         if (didPop) return;
         final shouldExit = await _handleBack();
-        if (shouldExit && mounted) {
+        if (shouldExit && context.mounted) {
           Navigator.of(context).maybePop();
         }
       },

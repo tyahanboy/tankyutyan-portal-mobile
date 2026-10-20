@@ -34,6 +34,7 @@ jobs:
           if [ ! -d android ]; then
             flutter create --platforms=android --project-name=tankyutyan_portal_mobile .
           fi
+          rm -f test/widget_test.dart
 
       - name: Install dependencies
         run: flutter pub get
