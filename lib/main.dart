@@ -67,7 +67,7 @@ class _PortalPageState extends State<PortalPage> {
             });
           },
           onWebResourceError: (error) {
-            if (!mounted || !error.isForMainFrame!) return;
+            if (!mounted || error.isForMainFrame != true) return;
             setState(() {
               _loading = false;
               _error = 'ページを読み込めませんでした。'
